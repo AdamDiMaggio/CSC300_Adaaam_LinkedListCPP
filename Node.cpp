@@ -1,9 +1,23 @@
-#include "Node.hpp"         //"" means local library we've created and < > means global library that comes with c++
+#include "Node.hpp"     //"" means import local file
 
-
-Node::Node(int payload)
+//Constructor
+Node::Node(int payload)   //class::constructor
 {
-    this->payload = payload;    //this 
+    //'this' is a Node*
+    this->payload = payload;                               
 }
 
+int Node::getPayload()
+{
+    return this->payload;
+}
 
+Node* Node::getNextNode() //returns the address of a node
+{
+    return this->nextNode;
+}
+
+void Node::setNextNode(Node* n)
+{
+    this->nextNode = n;
+}
